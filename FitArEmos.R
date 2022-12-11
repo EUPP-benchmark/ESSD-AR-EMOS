@@ -24,7 +24,6 @@ require(ensAR)
 # A longer series of missing values cannot be reasonably handeled
    
     if (any(!complete.cases(ens[, c(obs_col, mem_col)]))) {
-        warning("occurring NA's were replaced by spline interpolation")
         ens_approx <- apply(ens[, c(obs_col, mem_col)], 2, zoo::na.spline, 
             na.rm = FALSE)
         ens[, obs_col] <- ens_approx[, 1]
@@ -104,6 +103,7 @@ xtilde.ctrl[i] <- ens$ctrl[i+p.max] + mu.ctrl + sum(a.ctrl * (z.ctrl[i:(i+p.ctrl
 }
 
 # Variance of the AR process of the error series of ctrl member
+# (function implented in ensAR package)
 varAR.ctrl <- var_ar(ar = a.ctrl, i_var = z.ctrl_mod$var.pred)
 
 # AR-corrected ensemble members 
@@ -121,6 +121,7 @@ xtilde.ens[i,j] <- ens.dat[i+p.max, j] + mu.mean + sum(a.mean * (z.mean[i:(i+p.m
 }
 
 # Variance of the AR process of the error series of mean of the 10 members
+# (function implented in ensAR package)
 varAR.ens <- var_ar(ar = a.mean, i_var = z.mean_mod$var.pred)
 
 # Resulting AR-corrected ensemble members on training data and AR variance

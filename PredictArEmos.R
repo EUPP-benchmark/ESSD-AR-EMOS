@@ -46,6 +46,7 @@ sum(fit$coefs.ctrl * (z.ctrl[i:(i+fit$order.ctrl-1)] - fit$intercept.ctrl), na.r
 }
 
 # Variance of the AR process of the error series of ctrl member
+# (function implented in ensAR package)
 varAR.ctrl <- var_ar(ar = fit$coefs.ctrl, i_var = fit$var.ar.ctrl)
 
 
@@ -65,6 +66,7 @@ sum(fit$coefs.mean * (z.mean[i:(i+fit$order.mean-1)] - fit$intercept.mean), na.r
 }
 
 # Variance of the AR process of the error series of mean of the 50 members
+# (function implented in ensAR package)
 varAR.ens <- var_ar(ar = fit$coefs.mean, i_var = fit$var.ar.mean)
 
 
