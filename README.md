@@ -1,19 +1,9 @@
 # ESSD-AR-EMOS
 
----
-title: "Postprocessing with Autoregressive Heteroscedastic EMOS (AR-EMOS)"
-author: "Annette Möller"
-output:   
-  html_document:
-    df_print: paged
-date: '`r Sys.Date()`'
----
+# Postprocessing with Autoregressive Heteroscedastic EMOS (AR-EMOS)"
+# Annette Möller
+# 2022-12-22
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
----
 
 ## Method
 
