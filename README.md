@@ -1,6 +1,6 @@
 # ESSD-AR-EMOS
 
-# Postprocessing with Autoregressive Heteroscedastic EMOS (AR-EMOS)"
+# Postprocessing with Autoregressive Heteroscedastic EMOS (AR-EMOS)
 # Annette Möller
 # 2022-12-22
 
