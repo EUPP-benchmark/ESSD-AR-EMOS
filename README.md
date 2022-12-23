@@ -1,11 +1,16 @@
-# ESSD-AR-EMOS
-
 # Postprocessing with Autoregressive Heteroscedastic EMOS (AR-EMOS)
-# Annette Möller
-# 2022-12-22
 
+Provide the AR-EMOS output file (see the method's details below).
+
+This code is provided as supplementary material with:
+
+    ...: The EUPPBench postprocessing benchmark dataset v1.0, ...
+
+Please cite this article if you use (a part of) this code for a publication.
 
 ## Method
+
+Annette Möller - 2022-12-22
 
 AR-EMOS was introduced by [Möller and Groß (2016)](https://doi.org/10.1002/qj.2741) for postprocessing of 24h ahead forecasts of t2m. The method utilizes the autoregressive information in the forecast errors of the ensemble forecasts in order to estimate the parameters of a Gaussian predictive distribution in an EMOS-like fashion. 
 
@@ -23,7 +28,9 @@ The original AR-EMOS method as described in the references above is implemented 
 - [ncdf4](https://cran.r-project.org/web/packages/ncdf4/index.html): For importing the `*.nc`-files into R.
 - [zoo](https://cran.r-project.org/web/packages/zoo/index.html): For imputing individual missing values. 
 
+### Data
 
+First, if you do not have it, get the ESSD benchmark dataset using [the download script](https://github.com/EUPP-benchmark/ESSD-benchmark-datasets). This will fetch the dataset into NetCDF files on your disk.
 
 ### R-Script Information
 
