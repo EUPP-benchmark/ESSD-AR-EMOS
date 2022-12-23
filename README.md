@@ -1,12 +1,12 @@
 # Postprocessing with Autoregressive Heteroscedastic EMOS (AR-EMOS)
 
-Provide the AR-EMOS output file (see the method's details below).
+AR-EMOS scripts for the ESSD benchmark. Provide the AR-EMOS output file (see the method's details below).
 
 This code is provided as supplementary material with:
 
     ...: The EUPPBench postprocessing benchmark dataset v1.0, ...
 
-Please cite this article if you use (a part of) this code for a publication.
+**Please cite this article if you use (a part of) this code for a publication.**
 
 ## Method
 
