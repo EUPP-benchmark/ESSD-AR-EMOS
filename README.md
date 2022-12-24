@@ -10,8 +10,6 @@ This code is provided as supplementary material with:
 
 ## Method
 
-Annette Möller - 2022-12-22
-
 AR-EMOS was introduced by [Möller and Groß (2016)](https://doi.org/10.1002/qj.2741) for postprocessing of 24h ahead forecasts of t2m. The method utilizes the autoregressive information in the forecast errors of the ensemble forecasts in order to estimate the parameters of a Gaussian predictive distribution in an EMOS-like fashion. 
 
 Later on the estimation of the predictive standard deviation was further refined to combine the variance component obtained from the longitudinal time series information with the variance component from the cross-sectional empirical ensemble variance. The refined method is described in [Möller and Groß (2020)](https://doi.org/10.1002/qj.3667), along with an extension that makes it possible to apply the method to arbitrary forecast horizons. 
@@ -48,3 +46,5 @@ First, if you do not have it, get the ESSD benchmark dataset using [the download
 - To compromise, an **AR process was fitted separately to the control member** (as this is present in both data sets) **and one to the mean of the remaining members**. The estimated parameters from the control member were used to obtain the AR-corrected control member, the estimated parameters from the ensemble mean were then applied to each of the members (instead of applying it to the ensemble mean also) in order to generate an ensemble of Ar-corrected forecasts and not only an AR-corrected mean forecast. 
 - As AR-EMOS is based on a time series method a time series with equally spaced time points is required. What the time unit is (1 day, 1 hour, 3 days, ...) is not important, it is more important that the time points are as regular as possible, without (too extensive) gaps in between. Thus, missing values, especially a longer consecutive series of missing values can deteriorate the model estimation. In that regard, longer consecutive series of missing values were removed completely from the training data and model estimation performed only on the remaining data. 
 - The really long blocks of missing values are mostly concentrated at the beginning of the training data and sometimes at the end. So in fact the training data was reduced by cutting out these blocks. For individual or only few consecutive missing values in the middle of the data a spline-based interpolation was used for imputation - as in the original implementation of AR-EMOS. 
+
+Author: Annette Möller
