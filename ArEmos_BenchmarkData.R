@@ -49,8 +49,8 @@ for(h in 1:n.leadtimes)
 print(h)
 
 # Obtain subset of data corresponding to the leadtime of current loop step
-dat <- subset(benchmark_t2m_train, subset=(leadtime==leadtime[h]))
-dat.test <- subset(benchmark_t2m_test, subset=(leadtime==leadtime[h]))
+dat <- subset(benchmark_t2m_train, subset=(leadtime==leadtimes[h]))
+dat.test <- subset(benchmark_t2m_test, subset=(leadtime==leadtimes[h]))
 
 # Delete data from 2017 in training set, as the test set also contains 2017
 # data, this way, the data is not used twice for training and testing
